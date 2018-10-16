@@ -2,15 +2,13 @@
 
 function quickSort(array $array)
 {
-    $len = count($array);
-
-    if ($len <= 1) {
+    if (count($array) <= 1) {
         return $array;
     }
 
-    $pivot = $array[intval($len / 2)];
+    $pivot = array_shift($array);
     $left = [];
-    $middle = [];
+    $middle = [$pivot];
     $right = [];
 
     foreach ($array as $value) {
