@@ -7,8 +7,8 @@ function quickSort(array $array)
     }
 
     $pivot = array_shift($array);
-    $left = [];
     $middle = [$pivot];
+    $left = [];
     $right = [];
 
     foreach ($array as $value) {
